@@ -5,11 +5,13 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    @items = []
   end
   
   def add_item(item,price,quantity = 1)
     @last_item = price.to_f * quantity
     quantity.times {
+      @items << item
       @total += price
     }
   end
