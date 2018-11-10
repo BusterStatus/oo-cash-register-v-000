@@ -14,7 +14,7 @@ class CashRegister
       @items << item
       @total += price
     }
-    @all_items = @items
+    @all_items << @items
   end
   
   def apply_discount
@@ -29,7 +29,7 @@ class CashRegister
   end
   
   def items
-    @all_items
+    @all_items.flatten
   end
   
   def void_last_transaction
