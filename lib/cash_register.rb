@@ -11,7 +11,6 @@ class CashRegister
     @items = []
     @last_item = price.to_f * quantity
     quantity.times {
-      @items << item
       @total += price
     }
   end
